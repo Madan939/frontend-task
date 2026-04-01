@@ -1,55 +1,108 @@
-# 📝 Frontend Tasks
+# 🚀 Frontend Authentication & User Dashboard
 
-![Node.js](https://img.shields.io/badge/Node.js-20.19.6-green) ![React](https://img.shields.io/badge/React-18.2.0-blue) ![License](https://img.shields.io/badge/License-MIT-yellow)
+This project is a frontend application built using **Next.js/React**, implementing user authentication and a user listing dashboard. It connects to a backend server to handle registration, login, and fetching user data.
 
-A full-stack task management system with authentication, profile management, and a modern React UI.  
-Includes JWT access & refresh token authentication, CRUD operations for user profiles, search, pagination, and global state management with Zustand.
 
----
+## ⚙️ Installation & Setup
 
-## 🚀 Features
+## 🔗 Backend Setup
+clone this repository
+Make sure the backend server is running:
 
-### Backend
-- **User Authentication**
-  - Register new users
-  - Login with email & password
-  - JWT access token (15 min expiry)
-  - JWT refresh token (7 days expiry)
-  - Refresh access token endpoint
-  - Logout endpoint (invalidate refresh token)
-- **Profiles Management**
-  - List profiles with pagination and search
-  - Create, Update, Delete profiles
-  - Profile fields: `name`, `email`, `phone`, `address`, `dob`
-  - JWT-protected endpoints
-- **API Documentation**
-  - Swagger UI available at `/api-docs`
-  - Complete request & response examples
+```bash
+npm install
+npm run dev
+```
 
-### Frontend
-- **React + Zustand**
-- **Authentication**
-  - Simple Register & Login forms
-  - Access token stored in global state
-- **Profiles Dashboard**
-  - Display profiles in cards
-  - Pagination with next/prev buttons
-  - Global search for filtering profiles
-  - Create, edit, and delete profiles
-- **State Management**
-  - Global state using **Zustand**
-  - Handles user info, tokens, profiles, search term, and pagination
+Backend runs on:
+http://localhost:5000
+
+Swagger API documentation:
+http://localhost:5000/docs
+
+Frontend Task:
+
+## 🔐 Authentication Flow
+
+1. User must **register first**
+2. After successful registration, user can **log in**
+3. On login:
+
+   * Token is stored in localStorage
+   * User is redirected to homepage
+4. Unauthorized users are redirected to login page
 
 ---
 
-## 🛠 Tech Stack
+## 📄 Pages
 
-| Layer       | Technology                      |
-|------------ |--------------------------------|
-| Backend     | Node.js, Express.js, JWT, Swagger, dotenv, CORS |
-| Frontend    | React.js, Axios, Zustand, Tailwind CSS |
-| Database    | In-memory (demo)               |
+* **Register Page**
+
+  * Form built using react-hook-form
+  * Uses shadcn input, button, and form components
+
+* **Login Page**
+
+  * Validates user credentials
+  * Stores authentication token
+
+* **Home Page**
+
+  * Protected route
+  * Fetches users from backend
+  * Displays user profiles in card format
+
+---
+
+## 📡 API Integration
+
+All API calls are handled using axios.
+
+### Example endpoints:
+
+* `POST /register`
+* `POST /login`
+* `GET /users`
+
+Authorization header is used for protected routes:
+
+```bash
+Authorization: Bearer <token>
+```
+
+---
+
+## 🎨 UI Guidelines
+
+* Only **shadcn components** are used
+* No custom UI components created manually
+* Clean and responsive layout
 
 ---
 
 ## 📁 Project Structure
+
+```
+src/
+├── components/
+├── pages/ or app/
+│   ├── login/
+│   ├── register/
+│   ├── home/
+├── services/
+│   └── api.js
+```
+
+
+## 📬 Submission
+
+* GitHub Repository: `<your-repo-link>`
+* Submitted via company email
+
+---
+
+## 🙌 Acknowledgement
+
+This project was completed as part of a frontend technical assignment.
+
+---
