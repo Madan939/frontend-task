@@ -18,7 +18,7 @@ Backend runs on:
 http://localhost:5000
 
 Swagger API documentation:
-http://localhost:5000/docs
+http://localhost:5000/api-docs
 
 Frontend Task:
 
