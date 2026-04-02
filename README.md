@@ -1,7 +1,7 @@
 # 🚀 Frontend Authentication & User Dashboard
 
 This project is a frontend application built using **Next.js/React**, implementing user authentication and a user listing dashboard. It connects to a backend server to handle registration, login, and fetching user data.
-
+Please dont modify the server side code and perform your frontend side task only. If you modify the server side code, your task wont be reviewed.
 
 ## ⚙️ Installation & Setup
 
