@@ -51,6 +51,10 @@ Frontend Task:
   * Protected route
   * Fetches users from backend
   * Displays user profiles in card format
+  * also add global search in header
+  * create new user option
+  * edit the user
+  * delete the user
 
 ---
 
@@ -62,7 +66,9 @@ All API calls are handled using axios.
 
 * `POST /register`
 * `POST /login`
-* `GET /users`
+* `GET /api/profiles`
+* `POST /api/profiles`
+  see swagger for all endpoints
 
 Authorization header is used for protected routes:
 
